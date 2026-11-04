@@ -1,5 +1,19 @@
-import streamlit as st
+import streamlit as st​
 
-st.title("✅ 첫 배포 성공!")
-st.write("이 화면이 보이면 GitHub 저장소 → Streamlit Community Cloud 연결이 끝난 것입니다.")
-st.write("이제 app.py 를 고쳐 Commit 할 때마다 이 주소의 화면이 바뀝니다.")
+​
+
+st.title("🎈 나의 첫 Streamlit 앱")​
+
+st.write("Streamlit 은 파이썬 코드만으로​
+
+          웹 화면을 만듭니다.")​
+
+​
+
+nickname = st.text_input("별명을 입력하세요")​
+
+​
+
+if st.button("인사하기"):​
+
+    st.success(f"{nickname} 님, 반가워요!")​
