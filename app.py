@@ -5,6 +5,20 @@ import os
 import requests
 import streamlit as st
 from PIL import Image
+from pathlib import Path
+
+# 페이지 기본 설정
+st.set_page_config(
+    page_title="방구석 진품명품",
+    page_icon="🧐",
+    layout="centered",
+    initial_sidebar_state="collapsed"
+)
+
+# CSS 파일 적용
+style_path = Path(__file__).with_name("style.css")
+
+if style_path.is_file():
 
 MAX_SIDE = 1024
 SAMPLE_IMAGE = "sample.jpg"  # ★ GitHub/Colab에 올린 내 예시 사진 파일명
