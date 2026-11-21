@@ -19,6 +19,11 @@ st.set_page_config(
 style_path = Path(__file__).with_name("style.css")
 
 if style_path.is_file():
+    st.markdown(
+        f"<style>{style_path.read_text(encoding='utf-8')}</style>",
+        unsafe_allow_html=True
+    )
+
 
 MAX_SIDE = 1024
 SAMPLE_IMAGE = "sample.jpg"  # ★ GitHub/Colab에 올린 내 예시 사진 파일명
